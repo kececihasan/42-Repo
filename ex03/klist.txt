@@ -1,0 +1,5 @@
+Credentials cache: API:E201C592-D000-4FA5-913E-7546D40FC8AD
+        Principal: hkececi@42ISTANBUL.COM.TR
+
+  Issued                Expires             Flags    Principal
+Oct 18 16:01:59 2021  Oct 18 22:01:53 2021  FPIA   krbtgt/42ISTANBUL.COM.TR@42ISTANBUL.COM.TR
