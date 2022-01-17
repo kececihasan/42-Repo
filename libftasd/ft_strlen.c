@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hkececi <42istanbul.com.tr>                +#+  +:+       +#+        */
+/*   By: hkececi <hkececi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 15:37:50 by hkececi           #+#    #+#             */
-/*   Updated: 2022/01/06 15:50:37 by hkececi          ###   ########.tr       */
+/*   Updated: 2022/01/17 13:12:38 by hkececi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,15 +24,11 @@ size_t	ft_strlen(const char *str)
 	}
 	return(i);
 }
-
 /*int	main(void)
 {
-	char str[] = "Hasan";
-	char *p_str;
-
-	p_str = str;
+	char dizi[] = "Hasanwqdsa";
 	
-	int count = ft_strlen(p_str);
+	int count = ft_strlen(dizi);
 
 	printf("%d", count);
 }*/

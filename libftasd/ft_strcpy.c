@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hkececi <42istanbul.com.tr>                +#+  +:+       +#+        */
+/*   By: hkececi <hkececi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 14:15:43 by hkececi           #+#    #+#             */
-/*   Updated: 2022/01/10 14:17:33 by hkececi          ###   ########.tr       */
+/*   Updated: 2022/01/17 16:07:57 by hkececi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@ char	*ft_strcpy(char *dst, const char *src)
 	size_t	i;
 
 	i = 0;
-	while(src[i])
+	while(src[i] != '\0')
 	{
 		dst[i] = src[i];
-		i += 1;
+		i++;
 	}
 	dst[i] = '\0';
 	return (dst);

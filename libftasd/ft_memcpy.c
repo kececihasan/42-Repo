@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hkececi <42istanbul.com.tr>                +#+  +:+       +#+        */
+/*   By: hkececi <hkececi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 14:55:17 by hkececi           #+#    #+#             */
-/*   Updated: 2022/01/10 15:04:43 by hkececi          ###   ########.tr       */
+/*   Updated: 2022/01/17 15:39:42 by hkececi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "unistd.h"
+#include "libft.h"
+//#include <stdio.h>
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
@@ -25,4 +26,10 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 		n--;
 	}
 	return (dst);
+}
+int	main()
+{
+	char a[] = "Hasan";
+	char b[] = "Kecec";
+	ft_memcpy(a,b,5);
 }

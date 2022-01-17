@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hkececi <42istanbul.com.tr>                +#+  +:+       +#+        */
+/*   By: hkececi <hkececi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 14:18:22 by hkececi           #+#    #+#             */
-/*   Updated: 2022/01/10 14:22:29 by hkececi          ###   ########.tr       */
+/*   Updated: 2022/01/17 16:31:50 by hkececi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+//#include <stdio.h>
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
@@ -31,3 +32,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		dst[len] = '\0';
 	return(i + ft_strlen(src));
 }
+/*int main()
+{
+	char a[] = "Merhaba";
+	char b[] = "Dunya";
+	ft_strlcat(a,b,5);
+}*/
