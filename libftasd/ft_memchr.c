@@ -1,35 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hkececi <hkececi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/10 14:55:17 by hkececi           #+#    #+#             */
-/*   Updated: 2022/01/21 14:38:36 by hkececi          ###   ########.fr       */
+/*   Created: 2022/01/21 12:19:39 by hkececi           #+#    #+#             */
+/*   Updated: 2022/01/21 14:38:26 by hkececi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 //#include <stdio.h>
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void    *ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char *tmp1;
-	unsigned char *tmp2;
+    unsigned char   *ptr;
+    size_t  i;
 
-	tmp1 = (unsigned char *)src;
-	tmp2 = (unsigned char *)dst;
-	while (n > 0)
-	{
-		*tmp2++ = *tmp1++;
-		n--;
-	}
-	return (dst);
+    i = 0;
+    while(i < n)
+    {
+        ptr = (unsigned char *) s;
+        if (*ptr == (unsigned char)c)
+        {
+            return(ptr);
+        }
+        i++;
+        s++;
+    }
+    return (0);
 }
-/*int	main()
+/*int main()
 {
-	char a[] = "Hasan";
-	char b[] = "Kecec";
-	ft_memcpy(a,b,5);
+    char a[] = "Hasan";
+    printf("%s",ft_memchr(a,'s',5));
 }*/

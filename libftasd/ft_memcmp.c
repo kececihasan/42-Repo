@@ -1,35 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hkececi <hkececi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/10 14:55:17 by hkececi           #+#    #+#             */
-/*   Updated: 2022/01/21 14:38:36 by hkececi          ###   ########.fr       */
+/*   Created: 2022/01/21 14:37:52 by hkececi           #+#    #+#             */
+/*   Updated: 2022/01/21 16:43:54 by hkececi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <stdio.h>
+#include <stdio.h>
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+int ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned char *tmp1;
-	unsigned char *tmp2;
+    size_t  i;
 
-	tmp1 = (unsigned char *)src;
-	tmp2 = (unsigned char *)dst;
-	while (n > 0)
-	{
-		*tmp2++ = *tmp1++;
-		n--;
-	}
-	return (dst);
+    i = 0;
+    while (i < n)
+    {
+        if (((unsigned char *)s1)[i] != ((unsigned char *)s2)[i])
+            return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
+        i++;
+    }
+    return (0);
 }
-/*int	main()
-{
-	char a[] = "Hasan";
-	char b[] = "Kecec";
-	ft_memcpy(a,b,5);
-}*/
