@@ -1,36 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hkececi <42istanbul.com.tr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/27 12:05:00 by hkececi           #+#    #+#             */
-/*   Updated: 2022/02/07 14:59:29 by hkececi          ###   ########.tr       */
+/*   Created: 2022/02/07 15:01:36 by hkececi           #+#    #+#             */
+/*   Updated: 2022/02/07 15:03:40 by hkececi          ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-void	*ft_calloc(size_t n, size_t size)
+char	*ft_strdup(char *src)
 {
-	void	*ptr;
+	char  *dest;
+	size_t leng;
 
-	ptr = malloc(n *size);
-	if (ptr = NULL)
-		return (ptr);
-	ft_bzero(ptr, size * n);
-	return (ptr);
-}
-int main()
-{
-	int *arr,i;
-	ft_calloc(10,sizeof(int));
-	*arr = 7;
-	*(arr+1)=99;
-	for(i = 0; i < 10; i++)
-	{
-		printf("%d\n",*(arr+i));
-	}
+	leng = ft_strlen(src) + 1;
+	dest = malloc(sizeof(src[0]) * leng);
+	if (dest == NULL)
+		return (NULL);
+	ft_memcpy(dest, src, leng);
+	return (dest);
 }
