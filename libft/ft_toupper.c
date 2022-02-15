@@ -6,23 +6,22 @@
 /*   By: hkececi <42istanbul.com.tr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 12:24:44 by hkececi           #+#    #+#             */
-/*   Updated: 2022/01/18 12:24:44 by hkececi          ###   ########.fr       */
+/*   Updated: 2022/02/15 16:10:46 by hkececi          ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 //#include <stdio.h>
 
-int ft_toupper(int c)
+int	ft_toupper(int c)
 {
-    if (c >= 'a' && c <= 'z')
-    {
-        return (c - 32);
-    }
-    else
-        return (c);
+	if (c >= 'a' && c <= 'z')
+	{
+		return (c - 32);
+	}
+	else
+		return (c);
 }
-
 /*int main()
 {
     printf("%d",ft_toupper('b'));

@@ -6,31 +6,31 @@
 /*   By: hkececi <42istanbul.com.tr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 18:02:55 by hkececi           #+#    #+#             */
-/*   Updated: 2022/01/18 18:02:55 by hkececi          ###   ########.fr       */
+/*   Updated: 2022/02/15 16:32:01 by hkececi          ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 //#include <stdio.h>
 
-char    *ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-    int i;
-    const char  *ini;
+	int			i;
+	const char	*ini;
 
-    ini = s;
-    i = ft_strlen(s);
-    s = (s + i);
-    while (*s != *ini && c != *s)
-    {
-        s--;
-    }
-    if (c == *s)
-    {
-        return ((char *)s);
-    }
-    else
-        return (0);
+	ini = s;
+	i = ft_strlen(s);
+	s = (s + i);
+	while (*s != *ini && c != *s)
+	{
+		s--;
+	}
+	if (c == *s)
+	{
+		return ((char *)s);
+	}
+	else
+		return (0);
 }
 /*int main()
 {

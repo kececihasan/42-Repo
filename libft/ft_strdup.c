@@ -6,17 +6,17 @@
 /*   By: hkececi <42istanbul.com.tr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 15:01:36 by hkececi           #+#    #+#             */
-/*   Updated: 2022/02/07 15:03:40 by hkececi          ###   ########.tr       */
+/*   Updated: 2022/02/15 16:59:40 by hkececi          ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
+//#include <stdio.h>
 
 char	*ft_strdup(char *src)
 {
-	char  *dest;
-	size_t leng;
+	char	*dest;
+	size_t	leng;
 
 	leng = ft_strlen(src) + 1;
 	dest = malloc(sizeof(src[0]) * leng);
@@ -25,3 +25,8 @@ char	*ft_strdup(char *src)
 	ft_memcpy(dest, src, leng);
 	return (dest);
 }
+/*int main()
+{
+	char a[] = "Hasan";
+	printf("%s",ft_strdup(a));
+}*/

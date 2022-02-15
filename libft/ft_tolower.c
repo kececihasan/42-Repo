@@ -6,23 +6,22 @@
 /*   By: hkececi <42istanbul.com.tr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 12:57:50 by hkececi           #+#    #+#             */
-/*   Updated: 2022/01/18 12:57:50 by hkececi          ###   ########.fr       */
+/*   Updated: 2022/02/15 16:12:19 by hkececi          ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 //#include <stdio.h>
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
-    if (c >= 'A' && c <= 'Z')
-    {
-        return (c + 32);
-    }
-    else
-        return (c);
+	if (c >= 'A' && c <= 'Z')
+	{
+		return (c + 32);
+	}
+	else
+		return (c);
 }
-
 /*int main()
 {
     printf("%d",ft_tolower('D'));
