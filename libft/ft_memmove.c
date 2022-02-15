@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hkececi <42istanbul.com.tr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/06 13:46:23 by hkececi           #+#    #+#             */
-/*   Updated: 2022/01/06 13:50:40 by hkececi          ###   ########.tr       */
+/*   Created: 2022/01/10 15:10:41 by hkececi           #+#    #+#             */
+/*   Updated: 2022/02/15 14:12:52 by hkececi          ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <stdio.h>
 
-int	ft_isprint(int c)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	if (c >= 40 && c <= 176)
-		return (1);
-	return(0);
+	size_t			i;
+	unsigned char	*udst;
+	unsigned char	*usrc;
+
+	i = -1;
+	udst = (unsigned char *)dst;
+	usrc = (unsigned char *)src;
+	if (usrc < udst)
+		while (len-- > 0)
+			udst[len] = usrc[len];
+	else
+		while (++i < len)
+			udst[i] = usrc[i];
+	return (udst);
 }
-/*int	main()
-{
-	printf("%d",ft_isprint(42));
-}*/

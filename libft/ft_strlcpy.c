@@ -1,35 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hkececi <hkececi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/10 14:55:17 by hkececi           #+#    #+#             */
-/*   Updated: 2022/01/21 14:38:36 by hkececi          ###   ########.fr       */
+/*   Created: 2022/01/10 14:15:43 by hkececi           #+#    #+#             */
+/*   Updated: 2022/02/15 14:36:28 by hkececi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 //#include <stdio.h>
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
-	unsigned char *tmp1;
-	unsigned char *tmp2;
+	size_t	i;
 
-	tmp1 = (unsigned char *)src;
-	tmp2 = (unsigned char *)dst;
-	while (n > 0)
+	i = 0;
+	if (size > 0)
 	{
-		*tmp2++ = *tmp1++;
-		n--;
+		while ((size - 1) > i && src[i])
+		{
+			dest[i] = src[i];
+			i++;
+		}
+		dest[i] = '\0';
 	}
-	return (dst);
+	return (ft_strlen(src));
 }
-/*int	main()
+/*int main()
 {
-	char a[] = "Hasan";
-	char b[] = "Kecec";
-	ft_memcpy(a,b,5);
+	char a[] = "Ahmet";
+	char b[] = "Hasan";
+	printf("%d",ft_strlcpy(a,b,5));
 }*/

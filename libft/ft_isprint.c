@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hkececi <hkececi@student.42.fr>            +#+  +:+       +#+        */
+/*   By: hkececi <42istanbul.com.tr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/10 14:15:43 by hkececi           #+#    #+#             */
-/*   Updated: 2022/01/17 16:07:57 by hkececi          ###   ########.fr       */
+/*   Created: 2022/01/06 13:46:23 by hkececi           #+#    #+#             */
+/*   Updated: 2022/02/15 13:33:22 by hkececi          ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+//#include <stdio.h>
 
-char	*ft_strcpy(char *dst, const char *src)
+int	ft_isprint(int c)
 {
-	size_t	i;
-
-	i = 0;
-	while(src[i] != '\0')
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	dst[i] = '\0';
-	return (dst);
+	if (c >= 40 && c <= 176)
+		return (1);
+	return (0);
 }
+/*int	main()
+{
+	printf("%d",ft_isprint(42));
+}*/

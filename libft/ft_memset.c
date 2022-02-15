@@ -1,36 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hkececi <hkececi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/10 13:55:58 by hkececi           #+#    #+#             */
-/*   Updated: 2022/01/17 15:33:10 by hkececi          ###   ########.fr       */
+/*   Created: 2022/01/06 15:51:21 by hkececi           #+#    #+#             */
+/*   Updated: 2022/02/15 13:37:19 by hkececi          ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 //#include <stdio.h>
-//The bzero() function writes n zeroed bytes to the string s. If n is
-//zero, bzero() does nothing.
-//ft_memset(s, '\0', n); fonksiyonu ile aynı iş yapılabilir.
 
-void	ft_bzero(void *s, size_t n)
+void	*ft_memset(void *b, int c, size_t len)
 {
-	size_t	i;
-	unsigned char	*str;
+	unsigned char	*ub;
 
-	i = 0;
-	str = (unsigned char *)s;
-	while (i <= n)
-	{
-		str[i] = 0;
-		i++;
-	}	
+	ub = (unsigned char *)b;
+	while (len--)
+		*ub++ = (unsigned char)c;
+	return (b);
 }
-/*int main()
+/*int	main()
 {
-	char b[30];
-	ft_bzero(b, 6);
+	char name[] = "Hasan";
+	printf("%s",ft_memset(name, 'c', 3));
 }*/

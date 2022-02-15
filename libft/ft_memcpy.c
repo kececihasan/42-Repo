@@ -1,29 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hkececi <hkececi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/06 15:51:21 by hkececi           #+#    #+#             */
-/*   Updated: 2022/01/17 15:12:44 by hkececi          ###   ########.fr       */
+/*   Created: 2022/01/10 14:55:17 by hkececi           #+#    #+#             */
+/*   Updated: 2022/02/15 14:09:44 by hkececi          ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 //#include <stdio.h>
 
-void	*ft_memset(void *b, int c, size_t len)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	unsigned char *ub;
+	unsigned char	*tmp1;
+	unsigned char	*tmp2;
 
-	ub = (unsigned char *)b;
-	while (len--)
-		*ub++ = (unsigned char)c;
-	return (b);
+	tmp1 = (unsigned char *)src;
+	tmp2 = (unsigned char *)dst;
+	while (n > 0)
+	{
+		*tmp2++ = *tmp1++;
+		n--;
+	}
+	return (dst);
 }
 /*int	main()
 {
-	char name[] = "Hasan";
-	printf("%s",ft_memset(name, 'c', 3));
+	char a[] = "Hasan";
+	char b[] = "Kecec";
+	ft_memcpy(a,b,5);
 }*/
