@@ -6,7 +6,7 @@
 /*   By: hkececi <hkececi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 11:29:26 by hkececi           #+#    #+#             */
-/*   Updated: 2022/02/15 16:36:16 by hkececi          ###   ########.tr       */
+/*   Updated: 2022/02/16 16:44:06 by hkececi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,5 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	char s2[] = "Test bir iki";
 	char s3[] = "Test";
     printf("1,2: %d, 2,1: %d", ft_strncmp(s1, s2, 5), ft_strncmp(s2, s1, 5));
-	printf("\n\n3,2: %d, 2,3: %d", ft_strncmp(s3, s2, 4), ft_strncmp(s3, s2, 6));
+	printf("\n\n3,2: %d, 2,3: %d", ft_strncmp(s3, s2, 4), ft_strncmp(s2, s3, 6));
 }*/

@@ -6,11 +6,12 @@
 /*   By: hkececi <42istanbul.com.tr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 15:10:41 by hkececi           #+#    #+#             */
-/*   Updated: 2022/02/15 14:12:52 by hkececi          ###   ########.tr       */
+/*   Updated: 2022/02/16 16:33:37 by hkececi          ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+//#include <stdio.h>
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
@@ -29,3 +30,9 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 			udst[i] = usrc[i];
 	return (udst);
 }
+/*int main()
+{
+	char dest[] = "Hasan";
+	char source[] = "Kececi";
+	ft_memmove(dest,source,6);
+}*/

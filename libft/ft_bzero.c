@@ -6,7 +6,7 @@
 /*   By: hkececi <hkececi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 13:55:58 by hkececi           #+#    #+#             */
-/*   Updated: 2022/02/15 14:07:01 by hkececi          ###   ########.tr       */
+/*   Updated: 2022/02/16 17:07:43 by hkececi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,5 @@ void	ft_bzero(void *s, size_t n)
 }
 /*int main()
 {
-	char b[30];
 	ft_bzero(b, 6);
 }*/
