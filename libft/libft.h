@@ -6,7 +6,7 @@
 /*   By: hkececi <42istanbul.com.tr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 17:14:13 by hkececi           #+#    #+#             */
-/*   Updated: 2022/02/15 17:14:16 by hkececi          ###   ########.tr       */
+/*   Updated: 2022/02/17 13:22:44 by hkececi          ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ int		ft_tolower(int c);
 int		ft_atoi(const char *str);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strdup(char *src);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 size_t	ft_strlen(const char *str);
