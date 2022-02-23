@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hkececi <42istanbul.com.tr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/23 15:26:12 by hkececi           #+#    #+#             */
-/*   Updated: 2022/02/23 17:54:11 by hkececi          ###   ########.tr       */
+/*   Created: 2022/02/23 17:16:53 by hkececi           #+#    #+#             */
+/*   Updated: 2022/02/23 17:52:19 by hkececi          ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
-	write(fd, &c, 1);
+	if (s)
+	{
+		write(fd, s, ft_strlen(s));
+		write(fd, "\n", 1);
+	}
 }
 /*int main()
 {
-	ft_putchar_fd('a',1);
+	char a[] = "Hasan";
+	ft_putendl_fd(a,1);	
 }*/

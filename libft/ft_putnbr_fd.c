@@ -1,22 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hkececi <42istanbul.com.tr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/23 15:26:12 by hkececi           #+#    #+#             */
-/*   Updated: 2022/02/23 17:54:11 by hkececi          ###   ########.tr       */
+/*   Created: 2022/02/23 17:58:26 by hkececi           #+#    #+#             */
+/*   Updated: 2022/02/23 18:03:50 by hkececi          ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
-	write(fd, &c, 1);
+	long	ln;
+
+	ln = n;
+	if (ln < 0)
+	{
+		ft_putchar_fd('-',fd);
+		ln *= -1;
+	}
+	if (ln <= 9)
+		ft_putchar_fd(ln + '0', fd);
+	else
+	{
+		ft_putnbr_fd(ln / 10, fd);
+		ft_putnbr_fd(ln % 10, fd);
+	}
 }
-/*int main()
+int main()
 {
-	ft_putchar_fd('a',1);
-}*/
+	int a = 1423;
+	ft_putnbr_fd(a,1);
+}
