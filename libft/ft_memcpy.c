@@ -6,7 +6,7 @@
 /*   By: hkececi <hkececi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 14:55:17 by hkececi           #+#    #+#             */
-/*   Updated: 2022/02/15 14:09:44 by hkececi          ###   ########.tr       */
+/*   Updated: 2022/03/01 11:24:11 by hkececi          ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 
 	tmp1 = (unsigned char *)src;
 	tmp2 = (unsigned char *)dst;
+	if (!dst && !src)
+		return (NULL);
 	while (n > 0)
 	{
 		*tmp2++ = *tmp1++;

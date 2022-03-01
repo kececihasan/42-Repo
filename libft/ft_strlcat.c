@@ -6,7 +6,7 @@
 /*   By: hkececi <hkececi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 14:18:22 by hkececi           #+#    #+#             */
-/*   Updated: 2022/01/17 16:31:50 by hkececi          ###   ########.fr       */
+/*   Updated: 2022/03/01 11:10:11 by hkececi          ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	}
 	if (i < size)
 		dst[len] = '\0';
-	return(i + ft_strlen(src));
+	return (i + ft_strlen(src));
 }
 /*int main()
 {

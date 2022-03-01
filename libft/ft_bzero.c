@@ -6,7 +6,7 @@
 /*   By: hkececi <hkececi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 13:55:58 by hkececi           #+#    #+#             */
-/*   Updated: 2022/02/16 17:07:43 by hkececi          ###   ########.fr       */
+/*   Updated: 2022/03/01 11:16:11 by hkececi          ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,19 @@
 //zero, bzero() does nothing.
 //ft_memset(s, '\0', n); fonksiyonu ile aynı iş yapılabilir.
 
-void	ft_bzero(void *s, size_t n)
+void	*ft_bzero(void *s, size_t n)
 {
-	unsigned char	*str;
-	size_t			i;
+	char	*str;
+	size_t	i;
 
 	i = 0;
-	str = (unsigned char *)s;
-	while (i <= n)
+	str = (char *) s;
+	while (i < n)
 	{
-		str[i] = 0;
+		str[i] = '\0';
 		i++;
-	}	
+	}
+	return (s);
 }
 /*int main()
 {

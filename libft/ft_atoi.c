@@ -6,7 +6,7 @@
 /*   By: hkececi <42istanbul.com.tr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 18:14:06 by hkececi           #+#    #+#             */
-/*   Updated: 2022/02/15 17:24:50 by hkececi          ###   ########.tr       */
+/*   Updated: 2022/03/01 11:22:09 by hkececi          ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 
 int	ft_atoi(const char *str)
 {
-	int	c;
-	int	s;
-	int	res;
+	int		c;
+	int		s;
+	long	res;
 
 	c = 0;
 	s = 1;
@@ -35,6 +35,10 @@ int	ft_atoi(const char *str)
 	{
 		res = (res * 10) + (str[c] - '0');
 		c++;
+		if (res * s < -2147483648)
+			return (0);
+		if (res * s > 2147483647)
+			return (-1);
 	}
 	return (res * s);
 }
