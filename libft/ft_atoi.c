@@ -6,7 +6,7 @@
 /*   By: hkececi <42istanbul.com.tr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 18:14:06 by hkececi           #+#    #+#             */
-/*   Updated: 2022/03/01 11:22:09 by hkececi          ###   ########.tr       */
+/*   Updated: 2022/03/01 12:37:01 by hkececi          ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,26 +15,24 @@
 
 int	ft_atoi(const char *str)
 {
-	int		c;
 	int		s;
 	long	res;
 
-	c = 0;
 	s = 1;
 	res = 0;
-	while (str[c] == ' ' || str[c] == '\n' || str[c] == '\t'
-		|| str[c] == '\v' || str[c] == '\f' || str[c] == '\r')
-		c++;
-	while (str[c] == '-' || str[c] == '+')
+	while (*str == ' ' || *str == '\n' || *str == '\t'
+		|| *str == '\v' || *str == '\f' || *str == '\r')
+		str++;
+	if (*str == '-' || *str == '+')
 	{
-		if (str[c] == '-')
+		if (*str == '-')
 			s *= -1;
-		c++;
+		str++;
 	}
-	while (str[c] >= '0' && str[c] <= '9')
+	while (*str >= '0' && *str <= '9')
 	{
-		res = (res * 10) + (str[c] - '0');
-		c++;
+		res = (res * 10) + (*str - '0');
+		str++;
 		if (res * s < -2147483648)
 			return (0);
 		if (res * s > 2147483647)

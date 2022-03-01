@@ -6,7 +6,7 @@
 /*   By: hkececi <hkececi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 13:10:24 by hkececi           #+#    #+#             */
-/*   Updated: 2022/02/17 14:48:33 by hkececi          ###   ########.tr       */
+/*   Updated: 2022/03/01 12:51:22 by hkececi          ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,11 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*new_str;
 	int		i;
 	int		j;
-
+	
+	if (!s1 || !s2)
+		return (NULL);
 	new_str = (char *)malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
-	if (!s1 || !s2 || !new_str)
+	if (!new_str)
 		return (0);
 	i = 0;
 	while (s1[i] != '\0')
