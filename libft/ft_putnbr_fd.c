@@ -6,11 +6,12 @@
 /*   By: hkececi <42istanbul.com.tr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 17:58:26 by hkececi           #+#    #+#             */
-/*   Updated: 2022/02/23 18:03:50 by hkececi          ###   ########.tr       */
+/*   Updated: 2022/03/02 16:40:27 by hkececi          ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+//Girilen sayıyı yazdırır.
 
 void	ft_putnbr_fd(int n, int fd)
 {
@@ -19,7 +20,7 @@ void	ft_putnbr_fd(int n, int fd)
 	ln = n;
 	if (ln < 0)
 	{
-		ft_putchar_fd('-',fd);
+		ft_putchar_fd('-', fd);
 		ln *= -1;
 	}
 	if (ln <= 9)
@@ -30,8 +31,8 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putnbr_fd(ln % 10, fd);
 	}
 }
-int main()
+/*int main()
 {
 	int a = 1423;
 	ft_putnbr_fd(a,1);
-}
+}*/

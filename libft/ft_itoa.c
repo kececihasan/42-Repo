@@ -6,7 +6,7 @@
 /*   By: hkececi <42istanbul.com.tr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 16:06:40 by hkececi           #+#    #+#             */
-/*   Updated: 2022/03/02 14:04:26 by hkececi          ###   ########.tr       */
+/*   Updated: 2022/03/02 16:37:29 by hkececi          ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ char	*ft_itoa(int n)
 	isaret = n < 0;
 	n_long = n;
 	length = ft_uzunluk(n_long);
-	result = (char *)malloc((length + 1) *sizeof(char));
+	result = (char *)malloc((length + 1) * sizeof(char));
 	if (!result)
 		return (NULL);
 	result[length] = '\0';

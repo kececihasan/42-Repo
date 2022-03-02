@@ -6,7 +6,7 @@
 /*   By: hkececi <hkececi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 13:20:17 by hkececi           #+#    #+#             */
-/*   Updated: 2022/03/01 12:56:22 by hkececi          ###   ########.tr       */
+/*   Updated: 2022/03/02 17:32:40 by hkececi          ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,48 +37,52 @@ static int	count_words(const char *str, char c)
 	return (i);
 }
 
-static char	*word_dup(const char *str, int start, int finish)
+static char	*ft_create_str(const char *str, char c)
 {
-	char	*word;
 	int		i;
+	char	*ptr;
 
 	i = 0;
-	word = malloc((finish - start + 1) * sizeof(char));
-	if (!word)
-		return (0);
-	while (start < finish)
-		word[i++] = str[start++];
-	word[i] = '\0';
-	return (word);
+	while (str[i] && str[i] != c)
+		i++;
+	ptr = (char *) malloc(sizeof(char) * (i + 1));
+	if (!ptr)
+		return (NULL);
+	ft_strlcpy(ptr, str, i + 1);
+	return (ptr);
+}
+
+static void	*ft_free(char **ptr, int i)
+{
+	while (i > 0)
+		free(ptr[i--]);
+	free(ptr);
+	return (NULL);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	size_t	i;
-	size_t	j;
-	int		index;
+	int		i;
+	int		leng;
 	char	**split;
-	
+
 	if (!s)
 		return (0);
+	leng = count_words(s, c);
 	split = malloc((count_words(s, c) + 1) * sizeof(char *));
 	if (!split)
 		return (0);
-	i = 0;
-	j = 0;
-	index = -1;
-	while (i <= ft_strlen(s))
+	i = -1;
+	while (++i < leng)
 	{
-		if (s[i] != c && index < 0)
-			index = i;
-		else if ((s[i] == c || i == ft_strlen(s)) && index >= 0)
-		{
-			split[j++] = word_dup(s, index, i);
-			index = -1;
-		}
-		i++;
+		while (s[0] == c)
+			s++;
+		split[i] = ft_create_str(s, c);
+		if (!split[i])
+			return (ft_free(split, i));
+		s = s + ft_strlen(split[i]);
 	}
-	split[j] = 0;
+	split[i] = 0;
 	return (split);
 }
 /*int main()
@@ -88,4 +92,5 @@ char	**ft_split(char const *s, char c)
 	a = ft_split("hasan.kececi.asda", '.');
 	printf("%s\n",a[0]);
 	printf("%s\n",a[1]);
+	printf("%s\n",a[2]);
 }*/
