@@ -6,7 +6,7 @@
 /*   By: hkececi <42istanbul.com.tr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 18:02:55 by hkececi           #+#    #+#             */
-/*   Updated: 2022/02/15 16:32:01 by hkececi          ###   ########.tr       */
+/*   Updated: 2022/03/02 18:05:45 by hkececi          ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,22 +15,20 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int			i;
-	const char	*ini;
+	int		i;
+	char	*ptr;
 
-	ini = s;
-	i = ft_strlen(s);
-	s = (s + i);
-	while (*s != *ini && c != *s)
+	i = 0;
+	ptr = 0;
+	while (s[i])
 	{
-		s--;
+		if (s[i] == (unsigned char )c)
+			ptr = (char *)(s + i);
+		i++;
 	}
-	if (c == *s)
-	{
-		return ((char *)s);
-	}
-	else
-		return (0);
+	if (s[i] == c)
+		ptr = (char *)(s + i);
+	return (ptr);
 }
 /*int main()
 {

@@ -6,7 +6,7 @@
 /*   By: hkececi <42istanbul.com.tr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 13:18:48 by hkececi           #+#    #+#             */
-/*   Updated: 2022/02/15 16:18:19 by hkececi          ###   ########.tr       */
+/*   Updated: 2022/03/02 18:00:47 by hkececi          ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s != '\0' && c != *s)
+	while (*s != '\0' && *s != (char) c)
 		s++;
-	if (c == *s)
+	if (*s == (char) c)
 		return ((char *)s);
 	return (0);
 }
