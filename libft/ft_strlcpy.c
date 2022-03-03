@@ -6,7 +6,7 @@
 /*   By: hkececi <hkececi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 14:15:43 by hkececi           #+#    #+#             */
-/*   Updated: 2022/02/15 14:36:28 by hkececi          ###   ########.fr       */
+/*   Updated: 2022/03/03 13:54:44 by hkececi          ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,6 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 /*int main()
 {
 	char a[] = "Ahmet";
-	char b[] = "Hasan";
-	printf("%d",ft_strlcpy(a,b,5));
+	char b[] = "Has";
+	printf("%zu",ft_strlcpy(a,b,9));
 }*/

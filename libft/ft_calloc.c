@@ -6,7 +6,7 @@
 /*   By: hkececi <42istanbul.com.tr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 12:05:00 by hkececi           #+#    #+#             */
-/*   Updated: 2022/02/15 17:13:11 by hkececi          ###   ########.tr       */
+/*   Updated: 2022/03/03 16:47:28 by hkececi          ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,7 @@ void	*ft_calloc(size_t n, size_t size)
 }
 /*int main()
 {
-	int *arr,i;
-	ft_calloc(10,sizeof(int));
-	*arr = 7;
-	*(arr+1)=99;
-	for(i = 0; i < 10; i++)
-	{
-		printf("%d\n",*(arr+i));
-	}
+	char *a;
+
+	a = ft_calloc(1, 5);
 }*/

@@ -6,13 +6,14 @@
 /*   By: hkececi <42istanbul.com.tr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 15:01:36 by hkececi           #+#    #+#             */
-/*   Updated: 2022/02/15 16:59:40 by hkececi          ###   ########.tr       */
+/*   Updated: 2022/03/03 16:50:36 by hkececi          ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 //#include <stdio.h>
-
+//strdup allocates suffficient memmory for a copy of the string s1, does the copy
+//returns a pointer to it.
 char	*ft_strdup(char *src)
 {
 	char	*dest;
